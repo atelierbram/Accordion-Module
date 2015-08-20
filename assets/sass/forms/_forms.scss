@@ -1,0 +1,93 @@
+.form {
+  max-width: 30em;
+  padding: 1.5em 3em;
+}
+
+.form label {
+  padding-left: .125em;
+  color: $dark06;
+}
+
+.form p {
+  margin: 0;
+  padding: 0;
+}
+
+.form input[type="text"],
+.form input[type="password"] {
+  box-sizing: border-box;
+  background-clip: padding-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background: adjust-color($light01, $lightness: 7%);
+  border: 1px solid;
+  border-color: $light02;
+  color: $dark01;
+  outline: 0;
+  font-size: 24px;
+  width: 100%;
+  padding: .125em .25em;
+  margin: 2px 6px 16px 0;
+  text-align: left;
+  height: 1.8em;
+  vertical-align: top;
+  font-family: inherit;
+
+  &[disabled] {
+    background-color: #eee;
+  }
+}
+
+.login-submit {
+  float: right;
+}
+
+.button,
+.form input[type="submit"] {
+  -webkit-appearance: none;
+  display: inline-block;
+  outline: 0;
+  margin: 0;
+  padding: .5em .75em;
+  background: $blue;
+  border: 1px solid adjust-color($blue, $lightness: -5%);
+  cursor: pointer;
+  font-size: 1.25em;
+  font-weight: 300;
+  color: #fff;
+  text-shadow: 1px 1px 1px $dark_blue;
+  letter-spacing: 1px;
+  overflow: visible;
+  vertical-align: top;
+  width: auto;
+  border-width: 1px;
+  border-style: solid;
+  white-space: nowrap;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 0 transparentize($light_blue,.5) , 0 1px 0 transparentize($dark01,.85);
+  text-decoration: none;
+  border-radius: 4px;
+
+  &:hover {
+    background: adjust-color($blue, $lightness: -5%);
+    text-decoration: none;
+  }
+
+  &:active {
+    background: adjust-color($blue, $lightness: -10%);
+    box-shadow: inset rgba(black, 0.25) 0 1px 2px 0;
+    border-color: $dark_blue;
+  }
+
+  // Kill phantom spacing and dotted
+  // border that appears in Firefox.
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+}
+
+.login-remember {
+  display: inline-block;
+}

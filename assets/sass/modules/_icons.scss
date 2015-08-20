@@ -1,0 +1,11 @@
+.icon-svg-use {
+  position: absolute;
+  top: .27em;
+  left: -.5em;
+  height: 16px;
+  width: 16px;
+  fill: adjust-color($light_blue-cyan, $hue: 7%, $lightness: -10%);
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+}

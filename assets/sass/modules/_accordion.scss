@@ -1,0 +1,86 @@
+.accordion h3 {
+  font-size: 1.25em;
+  padding-top: .35em;
+  padding-bottom: .175em;
+  padding-left: 1em;
+  background-color: $light01;
+  color: adjust-color($dark_blue-cyan, $lightness: 15%);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid adjust-color($base05, $lightness: 10%);
+  cursor: pointer;
+  transition: all .4s;
+  position: relative;
+}
+
+// downward arrow in pseudo-element
+.accordion h3:after {
+  content: "";
+  position: absolute;
+  top:0;right:0;bottom:0;
+  margin-top: 16px; // same height as top x-height text
+  margin-right: 1.1em; // as far from right edge, as left padding text
+  width: .8em; // 16px: as wide as text is tall
+  height: 12px; // .4em height half-of-width 90deg angle
+  // SVG polygoon triangle of 16px wide and 8px tall:
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(31,127,142)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat;
+}
+
+.accordion .toggle-active {
+  background-color: adjust-color($light_blue, $saturation: -35%);
+  color: #fff;
+  text-shadow: 1px 1px 3px adjust-color($dark_blue, $saturation: -35%, $lightness: 15%);
+  border-top-color: adjust-color($light_blue,  $saturation: -35%,  $lightness: 35%);
+  border-bottom-color: adjust-color($blue, $saturation: -50%, $lightness: 10%);
+  font-weight: 300;
+}
+
+// hamburger menu for active section ISO downward arrow
+.accordion .toggle-active:after {
+  background: transparent;
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  height: 12px;
+}
+
+.accordion .toggle-active:before {
+  content: "";
+  position: absolute;
+  top:0;right:0;bottom:0;
+  margin-top: 21px; // same height as top x-height text
+  margin-right: 1.1em; // as far from right edge, as left padding text
+  width: .8em; // 16px as wide as text is tall
+  height: 2px; // 2px tall element to match the top- and bottom-border of after element
+  background-color: #fff;
+}
+
+// .accordion p {
+//   padding: 0;
+//   margin: 0;
+// }
+
+.post-type-archive-contacten .article-1col {
+  min-height: 100em;
+}
+.accordion > div {
+  max-height: 999px;
+  overflow: visible;
+  transition: max-height .3s;
+}
+.accordion .closed {
+  max-height: 0;
+  overflow: hidden;
+}
+
+// browsers which dont suport max-height ondersteunen: 2.5% worldwide, will not get a nice transition http://caniuse.com/#feat=minmaxwh
+.core .closed {
+  display: none;
+}
+
+// .accordion .content-contacten {
+.accordion_inner {
+  background-color: adjust-color($light_blue-cyan, $lightness: 36%);
+}
+
+.opened.accordion_inner {
+  // padding: 1.5em 2.75em 3em;
+}

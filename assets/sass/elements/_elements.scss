@@ -1,0 +1,61 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: $light02;
+}
+body {
+  font: 100%/1.5 "Fira Sans", AvenirNext-Regular, "Segoe Ui", "Lucida Grande", Verdana, sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+  color: $dark01;
+  font-weight: 400;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 2.5em;
+  padding: .125em 0 .25em .5em;
+}
+
+h1, h3 {
+  font-family: "Fira Sans", AvenirNextCondensed-Demibold, "Segoe UI", "Trebuchet MS", Tahoma, sans-serif;
+  margin: 0;
+  color: $base02;
+  font-weight: 500;
+}
+
+img,
+svg {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: $blue-cyan;
+}
+
+.footer {
+  padding-top: 3em;
+  padding-bottom: 1em;
+  text-align: center;
+}
+
+.footer .small a {
+  text-decoration: none;
+  display: inline-block;
+  padding: .25em;
+}
+
+.footer .small a:hover {
+  background-color: $light_blue-cyan;
+  color: #fff;
+}
+

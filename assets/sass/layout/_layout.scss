@@ -1,0 +1,30 @@
+.container {
+  max-width: 40em;
+  margin: 0 auto;
+  overflow: auto;
+  background-color: #fff;
+}
+
+.main {
+  min-height: calc(100vh - 13em);
+  background-color: #fff;
+  padding: 2em 3em;
+}
+
+.header {
+  min-height: 5em;
+  padding-left: 2em;
+}
+
+.subfooter {
+  min-height: 2em;
+}
+
+.footer {
+  min-height: 3em;
+}
+
+
+.subfooter {
+  padding-top: 3em;
+}
