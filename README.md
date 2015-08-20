@@ -2,7 +2,7 @@
 
 Accordion Ui Module with native (_vanilla_) javascript, adapted from [Accordion by Pinceladas da Web](https://github.com/pinceladasdaweb/accordion)
 
-![screenshot of accordion module](https://atelierbram.github.io/assets/img/accordion-module-screengrab.png "screenshot of accordion module")
+![screenshot of accordion module](http://atelierbram.github.io/Accordion-Module/assets/img/accordion-module-screengrab.png "screenshot of accordion module")
 
 ### Demo
 - [here on GitHub](http://atelierbram.github.io/Accordion-Module/)
