@@ -53,14 +53,6 @@
   background-color: #fff;
 }
 
-// .accordion p {
-//   padding: 0;
-//   margin: 0;
-// }
-
-.post-type-archive-contacten .article-1col {
-  min-height: 100em;
-}
 .accordion > div {
   max-height: 999px;
   overflow: visible;
@@ -76,11 +68,6 @@
   display: none;
 }
 
-// .accordion .content-contacten {
 .accordion_inner {
   background-color: adjust-color($light_blue-cyan, $lightness: 36%);
-}
-
-.opened.accordion_inner {
-  // padding: 1.5em 2.75em 3em;
 }

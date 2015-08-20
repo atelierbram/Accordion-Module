@@ -238,10 +238,6 @@ a {
   background-color: #fff;
 }
 
-.post-type-archive-contacten .article-1col {
-  min-height: 100em;
-}
-
 .accordion > div {
   max-height: 999px;
   overflow: visible;
