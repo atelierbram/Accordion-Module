@@ -31,15 +31,21 @@ Minimal required HTML-markup is:
 
 ```
 
-Include javascript in the bottom page, (_or better combine those in one request_)
+Include javascript in the bottom of HTML
 
 ```html
 <script src="assets/js/dom-ready.js" async defer></script>
 <script src="assets/js/accordion.js" async defer></script>
 ```
 
+Better, combine those in one request:
+```html
+<script src="assets/js/all.min.js" async defer></script>
+```
 
+For more info on the css see `assets/css/style.css` but also the Sass file in `assets/sass/modules/_accordion.scss`
 
 ### Resources
+- [Accordion by Pinceladas da Web](https://github.com/pinceladasdaweb/accordion)
 - SVG icons from [Google Material Design](https://github.com/google/material-design-icons)
 - javascript `for` [Loop Over querySelectorAll Matches](https://css-tricks.com/snippets/javascript/loop-queryselectorall-matches/)
