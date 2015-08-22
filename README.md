@@ -45,7 +45,7 @@ Better, combine those in one request:
 <script src="assets/js/all.min.js" async defer></script>
 ```
 
-For more info on the css see `assets/css/style.css` but also the Sass file in `assets/sass/modules/_accordion.scss`
+For more info on the css see [`assets/css/style.css`](https://github.com/atelierbram/Accordion-Module/blob/master/assets/css/style.css) but also the Sass file in [`assets/sass/modules/_accordion.scss`](https://github.com/atelierbram/Accordion-Module/blob/master/assets/sass/modules/_accordion.scss)
 
 ### Resources
 - [Accordion by Pinceladas da Web](https://github.com/pinceladasdaweb/accordion)
