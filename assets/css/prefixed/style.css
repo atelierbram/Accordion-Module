@@ -159,14 +159,20 @@ a {
   padding-top: .35em;
   padding-bottom: .175em;
   padding-left: 1em;
-  background-color: #dce9ee;
   color: #165b65;
+  background-color: #dce9ee;
+  border-left: 1px solid transparent;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #b5c3c9;
   cursor: pointer;
   -webkit-transition: all .4s;
           transition: all .4s;
   position: relative; }
+
+.accordion h3:nth-of-type(even) {
+  background-color: #edf4f7;
+  border-top-color: #fff;
+  border-bottom-color: #d2dbdf; }
 
 .accordion h3:after {
   content: "";
@@ -180,7 +186,8 @@ a {
   height: 12px;
   background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(31,127,142)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat; }
 
-.accordion .toggle-active {
+.accordion .toggle-active,
+.accordion h3:nth-of-type(even).toggle-active {
   background-color: #79b8d2;
   color: #fff;
   text-shadow: 1px 1px 3px #265c72;

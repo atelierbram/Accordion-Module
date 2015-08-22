@@ -6,7 +6,7 @@ Accordion Ui Module with native (_vanilla_) javascript, adapted from [Accordion 
 
 ### Demo
 - [here on GitHub](http://atelierbram.github.io/Accordion-Module/)
-- [on Codepen](http://codepen.io/atelierbram/)
+- [on Codepen](http://codepen.io/atelierbram/NqZpVg)
 
 
 Minimal required HTML-markup is:

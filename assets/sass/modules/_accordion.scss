@@ -3,13 +3,20 @@
   padding-top: .35em;
   padding-bottom: .175em;
   padding-left: 1em;
-  background-color: $light01;
   color: adjust-color($dark_blue-cyan, $lightness: 15%);
+  background-color: $light01;
+  border-left: 1px solid transparent;
   border-top: 1px solid #fff;
   border-bottom: 1px solid adjust-color($base05, $lightness: 10%);
   cursor: pointer;
   transition: all .4s;
   position: relative;
+}
+
+.accordion h3:nth-of-type(even) {
+ background-color: adjust-color($light01, $lightness: 5%);
+ border-top-color: #fff;
+ border-bottom-color: adjust-color($base05, $lightness: 20%);
 }
 
 // downward arrow in pseudo-element
@@ -25,7 +32,8 @@
   background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(31,127,142)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat;
 }
 
-.accordion .toggle-active {
+.accordion .toggle-active,
+.accordion h3:nth-of-type(even).toggle-active {
   background-color: adjust-color($light_blue, $saturation: -35%);
   color: #fff;
   text-shadow: 1px 1px 3px adjust-color($dark_blue, $saturation: -35%, $lightness: 15%);
