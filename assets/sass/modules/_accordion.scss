@@ -19,7 +19,7 @@
  border-bottom-color: adjust-color($base05, $lightness: 20%);
 }
 
-// downward arrow in pseudo-element
+// downward triangle in pseudo-element
 .accordion h3:after {
   content: "";
   position: absolute;
@@ -42,23 +42,9 @@
   font-weight: 300;
 }
 
-// hamburger menu for active section ISO downward arrow
-.accordion .toggle-active:after {
-  background: transparent;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  height: 12px;
-}
-
-.accordion .toggle-active:before {
-  content: "";
-  position: absolute;
-  top:0;right:0;bottom:0;
-  margin-top: 21px; // same height as top x-height text
-  margin-right: 1.1em; // as far from right edge, as left padding text
-  width: .8em; // 16px as wide as text is tall
-  height: 2px; // 2px tall element to match the top- and bottom-border of after element
-  background-color: #fff;
+// swap downward triangle with upward triangle when active
+  .accordion .toggle-active:after {
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(255,255,255)' points='8,0 16,12 0,12'/%3E%3C/svg%3E") no-repeat;
 }
 
 .accordion > div {

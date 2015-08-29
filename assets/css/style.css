@@ -195,22 +195,7 @@ a {
   font-weight: 300; }
 
 .accordion .toggle-active:after {
-  background: transparent;
-  border-top: 2px solid #fff;
-  border-bottom: 2px solid #fff;
-  height: 12px; }
-
-.accordion .toggle-active:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin-top: 21px;
-  margin-right: 1.1em;
-  width: .8em;
-  height: 2px;
-  background-color: #fff; }
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(255,255,255)' points='8,0 16,12 0,12'/%3E%3C/svg%3E") no-repeat; }
 
 .accordion > div {
   max-height: 999px;
