@@ -9,6 +9,7 @@ lib-cov
 *.gz
 *.rar
 *.ai
+*.css.map
 .sass-cache
 
 npm-debug.log
