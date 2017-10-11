@@ -1,3 +1,4 @@
+.DS_Store
 lib-cov
 *.seed
 *.log
@@ -8,6 +9,7 @@ lib-cov
 *.gz
 *.rar
 *.ai
+.sass-cache
 
 npm-debug.log
 node_modules

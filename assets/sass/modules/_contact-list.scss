@@ -1,20 +1,20 @@
-.contact-list {
+.accordion_contact-list {
   margin: 0;
   padding: .5em 2.5em 1em;
   list-style: none;
 }
 
-.contact-list li {
+.accordion_contact-list li {
   position: relative;
   margin: 0 0 0 -.75em;
   padding: 0 0 0 1em;
 }
 
-.content-contact {
-  padding-top: 1em;
-}
+// .accordion_content-contact {
+//   padding-top: 1em;
+// }
 
-.content-contact p {
+.accordion_content-contact p {
   margin: 0;
   padding: .5em 3em 1.5em;
 }

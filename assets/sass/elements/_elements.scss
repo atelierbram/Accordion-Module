@@ -4,10 +4,16 @@
   box-sizing: inherit;
 }
 
+html {
+  min-height: 100%;
+  margin-bottom: 1px;
+  overflow-y: scroll;
+}
+
 html,
 body {
   height: 100%;
-  background-color: $light02;
+  background-color: #fff;
 }
 body {
   font: 100%/1.5 "Fira Sans", AvenirNext-Regular, "Segoe Ui", "Lucida Grande", Verdana, sans-serif;
@@ -21,7 +27,7 @@ body {
 
 h1 {
   font-size: 2.5em;
-  padding: .125em 0 .25em .5em;
+  padding: 1em 0 .25em .5em;
 }
 
 h1, h3 {
@@ -42,11 +48,6 @@ a {
   color: $blue-cyan;
 }
 
-.footer {
-  padding-top: 3em;
-  padding-bottom: 1em;
-  text-align: center;
-}
 
 .footer .small a {
   text-decoration: none;

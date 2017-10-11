@@ -1,12 +1,12 @@
 .container {
   max-width: 40em;
   margin: 0 auto;
-  overflow: auto;
-  background-color: #fff;
+  // overflow: auto;
+  // background-color: #fff;
 }
 
 .main {
-  min-height: calc(100vh - 13em);
+  min-height: calc(100vh - 14.5em);
   background-color: #fff;
   padding: 2em 3em;
 }
@@ -16,15 +16,16 @@
   padding-left: 2em;
 }
 
-.subfooter {
-  min-height: 2em;
-}
+// .subfooter {
+//   padding-top: 3em;
+//   min-height: 2em;
+// }
 
 .footer {
+  position: absolute;
+  right:0;bottom:0;left:0;
   min-height: 3em;
-}
-
-
-.subfooter {
-  padding-top: 3em;
+  padding: 3em 2em;
+  text-align: center;
+  background-color: $light02;
 }

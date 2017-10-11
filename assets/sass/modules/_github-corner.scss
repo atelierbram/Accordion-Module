@@ -1,0 +1,13 @@
+@import "../variables/colors";
+
+.github-corner svg[style] {
+  transition: .3s all;
+  fill: $base06 !important;
+  color: $base04 !important;
+}
+
+.github-corner:hover svg[style] {
+  fill: $base06 !important;
+  color: $light_cyan !important;
+}
+

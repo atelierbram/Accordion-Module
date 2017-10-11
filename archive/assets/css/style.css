@@ -3,15 +3,10 @@
 *:after {
   box-sizing: inherit; }
 
-html {
-  min-height: 100%;
-  margin-bottom: 1px;
-  overflow-y: scroll; }
-
 html,
 body {
   height: 100%;
-  background-color: #fff; }
+  background-color: #cbdee6; }
 
 body {
   font: 100%/1.5 "Fira Sans", AvenirNext-Regular, "Segoe Ui", "Lucida Grande", Verdana, sans-serif;
@@ -24,7 +19,7 @@ body {
 
 h1 {
   font-size: 2.5em;
-  padding: 1em 0 .25em .5em; }
+  padding: .125em 0 .25em .5em; }
 
 h1, h3 {
   font-family: "Fira Sans", AvenirNextCondensed-Demibold, "Segoe UI", "Trebuchet MS", Tahoma, sans-serif;
@@ -41,21 +36,28 @@ svg {
 a {
   color: #2394a4; }
 
+.footer {
+  padding-top: 3em;
+  padding-bottom: 1em;
+  text-align: center; }
+
 .footer .small a {
   text-decoration: none;
   display: inline-block;
   padding: .25em; }
 
 .footer .small a:hover {
-  background-color: #5ec4cd;
+  background-color: #5ec5ce;
   color: #fff; }
 
 .container {
   max-width: 40em;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: auto;
+  background-color: #fff; }
 
 .main {
-  min-height: calc(100vh - 14.5em);
+  min-height: calc(100vh - 13em);
   background-color: #fff;
   padding: 2em 3em; }
 
@@ -63,15 +65,14 @@ a {
   min-height: 5em;
   padding-left: 2em; }
 
+.subfooter {
+  min-height: 2em; }
+
 .footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  min-height: 3em;
-  padding: 3em 2em;
-  text-align: center;
-  background-color: #cbdee6; }
+  min-height: 3em; }
+
+.subfooter {
+  padding-top: 3em; }
 
 .form {
   max-width: 30em;
@@ -153,35 +154,26 @@ a {
 .login-remember {
   display: inline-block; }
 
-.Accordion {
-  position: relative; }
-
-.accordion_button {
-  display: block;
-  position: relative;
-  width: 100%;
-  text-align: left;
-  font-family: inherit;
+.accordion h3 {
   font-size: 1.25em;
   padding-top: .35em;
   padding-bottom: .175em;
   padding-left: 1em;
   color: #165b65;
   background-color: #dce9ee;
-  border: 1px solid transparent;
-  border-top-color: #fff;
-  border-bottom-color: #b5c3c9;
-  border-right-color: #dfecf1;
+  border-left: 1px solid transparent;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #b5c3c9;
   cursor: pointer;
-  user-select: none;
-  transition: all .4s; }
+  transition: all .4s;
+  position: relative; }
 
-.accordion_button:nth-of-type(even) {
+.accordion h3:nth-of-type(even) {
   background-color: #edf4f7;
   border-top-color: #fff;
   border-bottom-color: #d2dbdf; }
 
-.accordion_button:after {
+.accordion h3:after {
   content: "";
   position: absolute;
   top: 0;
@@ -193,8 +185,8 @@ a {
   height: 12px;
   background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(31,127,142)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat; }
 
-.accordion_header.is-active,
-.accordion_button:nth-of-type(even).toggle-active {
+.accordion .toggle-active,
+.accordion h3:nth-of-type(even).toggle-active {
   background-color: #79b8d2;
   color: #fff;
   text-shadow: 1px 1px 3px #265c72;
@@ -202,45 +194,38 @@ a {
   border-bottom-color: #649cb4;
   font-weight: 300; }
 
-.accordion_header.is-active:after {
+.accordion .toggle-active:after {
   background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(255,255,255)' points='8,0 16,12 0,12'/%3E%3C/svg%3E") no-repeat; }
 
-.accordion_content {
-  overflow: hidden;
-  transition: .2s max-height;
-  will-change: max-height;
-  background-color: #eaf7f9; }
+.accordion > div {
+  max-height: 999px;
+  overflow: visible;
+  transition: max-height .3s; }
 
-.Accordion.is-hidden .accordion_content {
-  position: absolute;
-  opacity: 0;
-  visibility: hidden; }
+.accordion .closed {
+  max-height: 0;
+  overflow: hidden; }
 
-.accordion_label {
-  margin: 0 0 0 2.5em;
-  font-size: 1.125em;
-  padding: 1.5em 0 .5em; }
-
-.accordion_label:focus {
-  outline: none; }
-
-.core .accordion_content {
+.core .closed {
   display: none; }
 
-.core .accordion_content.is-active {
-  display: block; }
+.accordion_inner {
+  background-color: #ebf8f9; }
 
-.accordion_contact-list {
+.contact-list {
   margin: 0;
   padding: .5em 2.5em 1em;
   list-style: none; }
 
-.accordion_contact-list li {
+.contact-list li {
   position: relative;
   margin: 0 0 0 -.75em;
   padding: 0 0 0 1em; }
 
-.accordion_content-contact p {
+.content-contact {
+  padding-top: 1em; }
+
+.content-contact p {
   margin: 0;
   padding: .5em 3em 1.5em; }
 
@@ -250,18 +235,9 @@ a {
   left: -.5em;
   height: 16px;
   width: 16px;
-  fill: #3ba3bd;
+  fill: #3aa5bf;
   background-color: transparent;
   border-color: transparent;
   border-radius: 0; }
-
-.github-corner svg[style] {
-  transition: .3s all;
-  fill: #dfecf1 !important;
-  color: #899ca4 !important; }
-
-.github-corner:hover svg[style] {
-  fill: #dfecf1 !important;
-  color: #63c5a9 !important; }
 
 /*# sourceMappingURL=style.css.map */
