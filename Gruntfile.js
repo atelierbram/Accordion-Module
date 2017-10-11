@@ -41,7 +41,7 @@ module.exports = function(grunt) {
     cssmin: {
       dist: {
         files: {
-          'docs/assets/css/prefixed/style.min.css': 'assets/css/prefixed/style.css',
+          'docs/assets/css/style.min.css': 'assets/css/prefixed/style.css',
         }
       }
     },
