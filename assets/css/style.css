@@ -176,7 +176,7 @@ a {
   user-select: none;
   transition: all .4s; }
 
-.accordion_button:nth-of-type(even) {
+.Accordion:nth-of-type(even) .accordion_button {
   background-color: #edf4f7;
   border-top-color: #fff;
   border-bottom-color: #d2dbdf; }

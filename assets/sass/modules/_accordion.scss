@@ -23,7 +23,7 @@
   transition: all .4s;
 }
 
-.accordion_button:nth-of-type(even) {
+.Accordion:nth-of-type(even) .accordion_button {
  background-color: adjust-color($light01, $lightness: 5%);
  border-top-color: #fff;
  border-bottom-color: adjust-color($base05, $lightness: 20%);

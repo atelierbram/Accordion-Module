@@ -6,6 +6,7 @@ Accordion Ui Module with native (_vanilla_) javascript, adapted from [10up WP Co
 
 ### Demo
 - [here on GitHub](http://atelierbram.github.io/Accordion-Module/)
+- [on Codepen](https://codepen.io/atelierbram/pen/eGKNMe)
 
 Minimal required HTML-markup is:
 
