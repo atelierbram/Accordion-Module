@@ -1,5 +1,24 @@
 .Accordion {
   position: relative;
+  margin-top: 2px;
+}
+
+// downward triangle in pseudo-element
+.accordion_button:after {
+  content: "";
+  position: absolute;
+  top:0;right:0;bottom:0;
+  margin-top: 20px;
+  margin-right: .75em;
+  width: 16px;
+  height: 8px;
+  // SVG polygoon triangle of 16px wide and 8px tall:
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(31,127,142)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat;
+}
+
+// swap downward triangle with upward triangle when active
+.accordion_header.is-active .accordion_button:after {
+  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(255,255,255)' points='8,0 16,12 0,12'/%3E%3C/svg%3E") no-repeat;
 }
 
 .accordion_button {
@@ -8,54 +27,24 @@
   width: 100%;
   text-align: left;
   font-family: inherit;
-  font-size: 1.25em;
+  font-size: 1em;
   margin: 0;
-  padding-top: .35em;
-  padding-bottom: .175em;
+  // accordion_header should be 48px hight
+  padding-top: .608em;
+  padding-bottom: .408em;
   padding-left: 1em;
   color: adjust-color($dark_blue-cyan, $lightness: 15%);
   background-color: $light01;
-  border: 1px solid transparent;
-  border-top-color: #fff;
-  border-bottom-color: adjust-color($base05, $lightness: 10%);
-  border-right-color: $base06;
+  border: none;
   cursor: pointer;
   user-select: none;
   transition: all .4s;
 }
 
-.Accordion:nth-of-type(even) .accordion_button {
- background-color: adjust-color($light01, $lightness: 5%);
- border-top-color: #fff;
- border-bottom-color: adjust-color($base05, $lightness: 20%);
-}
-
-// downward triangle in pseudo-element
-.accordion_button:after {
-  content: "";
-  position: absolute;
-  top:0;right:0;bottom:0;
-  margin-top: 16px; // same height as top x-height text
-  margin-right: 1.1em; // as far from right edge, as left padding text
-  width: .8em; // 16px: as wide as text is tall
-  height: 12px; // .4em height half-of-width 90deg angle
-  // SVG polygoon triangle of 16px wide and 8px tall:
-  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(31,127,142)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat;
-}
-
-.accordion_header.is-active,
-.accordion_button:nth-of-type(even).toggle-active {
-  background-color: adjust-color($light_blue, $saturation: -35%);
+.accordion_header.is-active .accordion_button {
+  background-color: $light03;
   color: #fff;
-  text-shadow: 1px 1px 3px adjust-color($dark_blue, $saturation: -35%, $lightness: 15%);
-  border-top-color: adjust-color($light_blue,  $saturation: -35%,  $lightness: 35%);
-  border-bottom-color: adjust-color($blue, $saturation: -50%, $lightness: 10%);
   font-weight: 300;
-}
-
-// swap downward triangle with upward triangle when active
-.accordion_header.is-active:after {
-  background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(255,255,255)' points='8,0 16,12 0,12'/%3E%3C/svg%3E") no-repeat;
 }
 
 .accordion_content {
@@ -65,24 +54,11 @@
   background-color: adjust-color($light_blue-cyan, $lightness: 36%);
 }
 
-// .accordion_content {
-//   max-height: 0;
-//   will-change: max-height;
-//   overflow: hidden;
-//   background-color: adjust-color($light_blue-cyan, $lightness: 36%);
-// }
-
 .Accordion.is-hidden .accordion_content {
   position: absolute;
   opacity: 0;
   visibility: hidden;
 }
-
-// .accordion_content.is-active {
-//   max-height: 500px;
-//   overflow-x: visible;
-//   overflow-y: scroll;
-// }
 
 .accordion_label {
   margin: 0 0 0 2.5em;
@@ -94,11 +70,13 @@
   outline: none;
 }
 
+
 // browsers which dont suport max-height ondersteunen: 2.5% worldwide, will not get a nice transition http://caniuse.com/#feat=minmaxwh
 .core .accordion_content {
   display: none;
 }
 
+.no-js.core .accordion_content,
 .core .accordion_content.is-active {
   display: block;
 }

@@ -154,33 +154,8 @@ a {
   display: inline-block; }
 
 .Accordion {
-  position: relative; }
-
-.accordion_button {
-  display: block;
   position: relative;
-  width: 100%;
-  text-align: left;
-  font-family: inherit;
-  font-size: 1.25em;
-  margin: 0;
-  padding-top: .35em;
-  padding-bottom: .175em;
-  padding-left: 1em;
-  color: #165b65;
-  background-color: #dce9ee;
-  border: 1px solid transparent;
-  border-top-color: #fff;
-  border-bottom-color: #b5c3c9;
-  border-right-color: #dfecf1;
-  cursor: pointer;
-  user-select: none;
-  transition: all .4s; }
-
-.Accordion:nth-of-type(even) .accordion_button {
-  background-color: #edf4f7;
-  border-top-color: #fff;
-  border-bottom-color: #d2dbdf; }
+  margin-top: 2px; }
 
 .accordion_button:after {
   content: "";
@@ -188,23 +163,37 @@ a {
   top: 0;
   right: 0;
   bottom: 0;
-  margin-top: 16px;
-  margin-right: 1.1em;
-  width: .8em;
-  height: 12px;
+  margin-top: 20px;
+  margin-right: .75em;
+  width: 16px;
+  height: 8px;
   background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(31,127,142)' points='8,12 0,0 16,0'/%3E%3C/svg%3E") 0 0 no-repeat; }
 
-.accordion_header.is-active,
-.accordion_button:nth-of-type(even).toggle-active {
-  background-color: #79b8d2;
-  color: #fff;
-  text-shadow: 1px 1px 3px #265c72;
-  border-top-color: white;
-  border-bottom-color: #649cb4;
-  font-weight: 300; }
-
-.accordion_header.is-active:after {
+.accordion_header.is-active .accordion_button:after {
   background: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 12'%3E%3Cpolygon fill='rgb(255,255,255)' points='8,0 16,12 0,12'/%3E%3C/svg%3E") no-repeat; }
+
+.accordion_button {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+  font-size: 1em;
+  margin: 0;
+  padding-top: .608em;
+  padding-bottom: .408em;
+  padding-left: 1em;
+  color: #165b65;
+  background-color: #dce9ee;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  transition: all .4s; }
+
+.accordion_header.is-active .accordion_button {
+  background-color: #bad3de;
+  color: #fff;
+  font-weight: 300; }
 
 .accordion_content {
   overflow: hidden;
@@ -228,6 +217,7 @@ a {
 .core .accordion_content {
   display: none; }
 
+.no-js.core .accordion_content,
 .core .accordion_content.is-active {
   display: block; }
 

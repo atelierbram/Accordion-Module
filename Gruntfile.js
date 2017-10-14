@@ -61,8 +61,8 @@ module.exports = function(grunt) {
     concat: {
       dist: {
         files: {
-          // 'assets/js/concat.js' :  ['assets/js/dom-ready.js','assets/js/accordion.js']
-          'assets/js/concat.js' :  ['assets/js/accordion.js','assets/js/dynamic-max-height-value.js', 'assets/js/accordion-init.js']
+          // 'assets/js/concat.js' :  ['assets/js/accordion.js','assets/js/dynamic-max-height-value.js', 'assets/js/accordion-init.js']
+          'assets/js/concat.js' :  ['assets/js/accordion.js','assets/js/dynamic-max-height-value.js']
         }
       }
     },
