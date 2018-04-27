@@ -1,33 +1,41 @@
 {
   "name": "accordion-module",
   "version": "0.0.2",
+  "description": "Accordion Module",
   "main": "Gruntfile.js",
+  "directories": {
+    "doc": "docs"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "description": "Accordion Module",
   "repository": {
     "type": "git",
-    "url": "https://github.com/atelierbram/Accordion-Module.git"
-  },
-  "author": "Bram de Haan <info@atelierbramdehaan.nl>",
-  "license": "MIT",
-  "homepage": "http://atelierbram.github.io/Accordion-Module/",
-  "devDependencies": {
-    "autoprefixer": "^7.1.5",
-    "grunt": "^1.0.1",
-    "grunt-contrib-concat": "^0.5.1",
-    "grunt-contrib-cssmin": "^0.12.3",
-    "grunt-contrib-htmlmin": "^0.4.0",
-    "grunt-contrib-uglify": "^3.1.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-postcss": "^0.9.0",
-    "grunt-sass": "^2.0.0",
-    "matchdep": "^2.0.0",
-    "pretty": "^1.0.0",
-    "time-grunt": "^1.0.0"
+    "url": "git+https://github.com/atelierbram/Accordion-Module.git"
   },
   "keywords": [
-    "Webdesign"
-  ]
+    "Webdesign",
+    "Ui",
+    "Accordion"
+  ],
+  "author": "Bram de Haan <info@atelierbramdehaan.nl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atelierbram/Accordion-Module/issues"
+  },
+  "homepage": "https://github.com/atelierbram/Accordion-Module#readme",
+  "devDependencies": {
+    "autoprefixer": "^8.3.0",
+    "grunt": "^1.0.2",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.2.1",
+    "grunt-contrib-htmlmin": "^2.4.0",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.1",
+    "grunt-postcss": "^0.9.0",
+    "grunt-sass": "^2.1.0",
+    "matchdep": "^2.0.0",
+    "pretty": "^2.0.0",
+    "time-grunt": "^1.4.0"
+  }
 }
