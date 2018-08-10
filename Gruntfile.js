@@ -9,6 +9,7 @@ module.exports = function(grunt) {
 
     sass: {
       options: {
+        implementation: require('node-sass'),
         sourceMap: true
       },
       dist: {
@@ -26,6 +27,7 @@ module.exports = function(grunt) {
         },
         processors: [
           require('autoprefixer')({browsers: 'last 2 versions'}),
+          require('cssnano')(),
         ]
       },
 
@@ -33,18 +35,19 @@ module.exports = function(grunt) {
         expand: true,
         flatten: true,
         files: {
-          'assets/css/prefixed/style.css': 'assets/css/style.css'
+          // 'assets/css/prefixed/style.css': 'assets/css/style.css'
+          'docs/assets/css/style.min.css': 'assets/css/style.css',
         }
       }
     },
 
-    cssmin: {
-      dist: {
-        files: {
-          'docs/assets/css/style.min.css': 'assets/css/prefixed/style.css',
-        }
-      }
-    },
+    // cssmin: {
+    //   dist: {
+    //     files: {
+    //       'docs/assets/css/style.min.css': 'assets/css/prefixed/style.css',
+    //     }
+    //   }
+    // },
 
     htmlmin: {                                     // Task
       dist: {                                      // Target
@@ -88,7 +91,7 @@ module.exports = function(grunt) {
 
       scss: {
         files: ['assets/**/*.scss'],
-        tasks: ['scss','postcss','cssmin'],
+        tasks: ['scss','postcss'],
         options: {
           // spawn: false
         }
@@ -109,12 +112,12 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('build', ['concat', 'uglify', 'sass', 'postcss:dist', 'cssmin', 'htmlmin']);
-  grunt.registerTask('scss', ['sass', 'postcss:dist', 'cssmin']);
+  grunt.registerTask('build', ['concat', 'uglify', 'sass', 'postcss:dist', 'htmlmin']);
+  grunt.registerTask('scss', ['sass', 'postcss:dist']);
   grunt.registerTask('js', ['uglify', 'concat']);
   grunt.registerTask('default', ['build', 'watch']);
   grunt.registerTask('dev', ['watch']);
 
-  grunt.loadNpmTasks('grunt-sass','grunt-contrib-htmlmin', 'grunt-contrib-cssmin','grunt-contrib-concat','grunt-contrib-uglify','grunt-contrib-watch','grunt-postcss');
+  grunt.loadNpmTasks('grunt-sass','grunt-contrib-htmlmin','grunt-contrib-concat','grunt-contrib-uglify','grunt-contrib-watch','grunt-postcss');
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 };
