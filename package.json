@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "dependencies": {
-    "grunt-sass": "^3.0.2"
+    "grunt-sass": "^3.1.0"
   },
   "devDependencies": {
     "autoprefixer": "*",
@@ -26,7 +26,9 @@
   "scripts": {
     "update:packages": "node ../../../js/snippets/npm-wipe-package-dependencies.js && rm -rf node_modules && npm update --save-dev && npm update --save"
   },
-  "browserslist": ["defaults"],
+  "browserslist": [
+    "defaults"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atelierbram/Accordion-Module.git"
